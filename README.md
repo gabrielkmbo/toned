@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# Korean Color Analysis App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application that uses computer vision to analyze your photo and recommend colors that best match your skin tone based on Korean color theory principles.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Take a photo using your device's camera
+- Upload an existing photo
+- Analyze skin tone and facial features
+- Get personalized color recommendations
+- See which colors to avoid based on your analysis
+- Responsive design for desktop and mobile devices
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Image Processing**: TensorFlow.js, HTML5 Canvas
+- **Camera/File Handling**: react-webcam, react-dropzone
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/toned-color-analysis.git
+   cd toned-color-analysis
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
+   ```
+   npm start
+   ```
 
-### `npm run eject`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## How It Works
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. The app captures your photo through your camera or from an uploaded file
+2. It uses TensorFlow.js to analyze facial features (simplified in the MVP)
+3. The app extracts your skin tone and determines if you have warm or cool undertones
+4. Based on this analysis, it recommends a color palette using Korean color theory principles
+5. The app displays both recommended colors and colors to avoid
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## MVP Limitations
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This is a Minimum Viable Product (MVP) with some simplifications:
 
-## Learn More
+- Simplified skin tone detection
+- Basic warm/cool undertone classification
+- Sample color palettes rather than fully personalized recommendations
+- No persistent storage of analysis results
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Advanced facial feature detection and analysis
+- More sophisticated Korean color theory implementation
+- Seasonal color analysis
+- Clothing and makeup recommendations
+- AR features for virtual try-on
+- User accounts and history
+- Sharing capabilities
+
+## Dependencies
+
+- react
+- react-dom
+- typescript
+- tailwindcss
+- @tensorflow/tfjs
+- @tensorflow-models/face-landmarks-detection
+- react-webcam
+- react-dropzone
+
+## License
+
+MIT License
+
+## Acknowledgments
+
+- Korean color theory practitioners
+- TensorFlow.js team
+- React and Tailwind CSS communities
